@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/top_panel.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/main.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
@@ -15,8 +16,8 @@
         <div class="navbar_wrapper">
             <div class="navbar center">
                 <ul>
-                    <li><a href="./home">О ПРОЕКТЕ</a></li>
-                    <li><a href="./about">ГЛАВНАЯ</a></li>
+                    <li><a href="./about">О ПРОЕКТЕ</a></li>
+                    <li><a href="./home">ГЛАВНАЯ</a></li>
                     <li><a href="./contact">СТАТИСТИКА</a></li>
                 </ul>
             </div>

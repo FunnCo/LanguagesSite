@@ -43,6 +43,7 @@
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
+    <Content Include="static\content\main.css" />
     <Content Include="static\content\site.css" />
     <Content Include="static\content\top_panel.css" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />

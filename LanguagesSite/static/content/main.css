@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    background: #181818;
+}
+
+h1, h2, h3, h4 {
+    color: whitesmoke;
+}
+
+p {
+    color: whitesmoke;
+}
+
+.wrapper {
+    display: inline-block;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+}
+
+.card {
+    border: 2px solid #686868;
+    background-color: #333;
+    border-radius: 4px;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+    .card:hover {
+        transform: scale(1.07);
+    }
+
+.normal-letters {
+    letter-spacing: 2px;
+}
+
+.margin-15rem-left {
+    margin-left: 15rem;
+}
+
+.link {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+}
+
+    .link:hover {
+        color: white;
+        font-style: normal;
+        text-decoration: underline;
+    }
+
+/* 
+Main - #181818
+Main Supporting - #595959
+Additional - #232323
+Additional Supporting - #686868
+Shadow - #3D3D3D
+*/
