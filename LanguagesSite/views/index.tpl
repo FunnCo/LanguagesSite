@@ -1,7 +1,8 @@
-% rebase('layout.tpl', title='Home Page', year=year)
+% rebase('layout.tpl', title='Home Page', year=year)      
 
+<div id="pageWrapper">
         <div>
-            <div class="margin-15rem-left">
+            <div class="margin-15rem-left" onclick="showRedirectMessage('https://www.youtube.com')">
                 <h1 class="normal-letters">Каталог языков</h1>
             </div>
         </div>
@@ -202,3 +203,7 @@
                         <p>Основатель: Андерс Хейлсберг</p> 
                     </div>
 
+
+                    </div>
+
+                    </div>

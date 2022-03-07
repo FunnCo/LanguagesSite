@@ -12,7 +12,8 @@
 </head>
 
 <body>
-        <div class="top_panel_wrapper">
+
+        <div class="top_panel_wrapper" id="topPanel">
         <div class="navbar_wrapper">
             <div class="navbar center">
                 <ul>
@@ -30,10 +31,25 @@
     <div class="container body-content">
         {{!base}}
     </div>
+            <div id="modalCard" class="modal-card modal-pop-up">
+            <div>
+                <h2>Переход на другую страницу</h2>
+                <hr>
+                <p id="modalText">Вы уверены, что хотите перейти на страницу: </p>
+                <div class="modal-pop-up-content">
+                    <button id="modalYes"> 
+                        Да
+                    </button>
+                    <button id="modalNo">
+                        Нет
+                    </button>
+                </div>
+            </div>
+        </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-
+    <script src="/static/scripts/site-scripts.js"></script>
 </body>
 </html>
