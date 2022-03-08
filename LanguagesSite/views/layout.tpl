@@ -35,7 +35,7 @@
             <div>
                 <h2>Переход на другую страницу</h2>
                 <hr>
-                <p id="modalText">Вы уверены, что хотите перейти на страницу: </p>
+                <p class="link-text" id="modalText">Вы уверены, что хотите перейти на страницу: </p>
                 <div class="modal-pop-up-content">
                     <button id="modalYes"> 
                         Да
