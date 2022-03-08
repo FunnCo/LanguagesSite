@@ -1,24 +1,33 @@
-% rebase('layout.tpl', title='О проекте', year=year) 
+<!-- Ссылка на страницу -->
+% rebase('layout.tpl', title='О проекте', year=year)
 
+    <!-- Блок описания -->
     <div>
         <div class="description_container">
             <div class="margin-50rem-right">
+                <!-- Текст заголовка -->
                 <h1 class="heading">О ./catalog</h1>
             </div>
             <div>
+                <!-- Текст описания -->
                 <p class="description">./catalog был создан для людей, интересующихся программированием, и призван помочь быстро и удобно ознакомиться с лидерами столь разнообразного рынка по сферам, сравнить их между собой, а также определиться с выбором языка для изучения.</p>
              </div>
         </div>
     </div>
 
+    <!-- Блок карточек -->
     <div>
         <div class="center persons_container">
             <div class="person">
                 <div>
+                    <!-- Ссылка на GitHub -->
                     <a href="https://github.com/FunnCo" class="person-link">
+                        <!-- Ссылка на картинку -->
                         <p><img src="https://sun9-33.userapi.com/impg/iX6pE9TI55RsDTya5pZvigrAt85dgyELEU-uCQ/nLRQ7NN7LXo.jpg?size=1440x2160&quality=96&sign=44d4db9ddf0888ef77c71b9b550b14e6&type=album" width="400" height="500" class="image"></p>
+                        <!-- Текст имени -->
                         <h4 class="normal-letters">Максим Мареев</h4>
                     </a>
+                    <!-- Текст объекта разработки -->
                     <p class="p-secondary">Раздел «Главная»</p>
                 </div>
             </div>
