@@ -58,7 +58,55 @@ p {
     transform: scale(1.03);
 }
 
-/* —тиль используемый в некоторых текстах, где нужно большее расто€ние между буквами */
+.description_container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-rows: auto;
+    grid-column-gap: 4rem;
+    padding-bottom: 40px;
+}
+
+.heading {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.persons_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: 8rem;
+}
+
+.person {
+    background-color: #333;
+    border-radius: 16px;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.person-link {
+    color: white;
+    text-decoration: none;
+}
+
+    .person-link:hover {
+        color: white;
+        font-style: normal;
+        text-decoration: underline;
+    }
+
+.p-secondary {
+    color: #686868;
+}
+
+.image {
+    border-radius: 8px;
+}
+
 .normal-letters {
     letter-spacing: 2px;
 }
@@ -68,7 +116,10 @@ p {
     margin-left: 15rem;
 }
 
-/* —тиль оформлени€ ссылок на другие сайты */
+.margin-50rem-right {
+    margin-right: 50rem;
+}
+
 .link {
     color: white;
     font-style: italic;
