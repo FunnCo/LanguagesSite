@@ -8,13 +8,16 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/top_panel.css" />
+
+    <!-- Подключение стилей, которые были использованы при создании сайта. -->
     <link rel="stylesheet" type="text/css" href="/static/content/main.css" />
+
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
 <body>
-
-        <div class="top_panel_wrapper" id="topPanel">
+    <!--Верхняя навигационная панель -->
+    <div class="top_panel_wrapper" id="topPanel">
         <div class="navbar_wrapper">
             <div class="navbar center">
                 <ul>
@@ -24,26 +27,31 @@
                 </ul>
             </div>
         </div>
+
+        <!-- Класс-оверлей, для отображения названия сайта (он же логотип) -->
         <div class="top-panel_overlay">
             <p class="normal-letters">./catalog</p>
         </div>
     </div>
 
+    <!-- Содержание текущей страницы -->
     <div class="container body-content">
         {{!base}}
     </div>
-            <div id="modalCard" class="modal-card modal-pop-up">
-            <div>
-                <h2>Переход на другую страницу</h2>
-                <hr>
-                <p class="link-text" id="modalText">Вы уверены, что хотите перейти на страницу: </p>
-                <div class="modal-pop-up-content">
-                    <button id="modalYes"> 
-                        Да
-                    </button>
-                    <button id="modalNo">
-                        Нет
-                    </button>
+
+    <!-- Создание модального окна, для подтверждения перехода -->
+    <div id="modalCard" class="modal-card modal-pop-up">
+        <div>
+           <h2>Переход на другую страницу</h2>
+           <hr>
+           <p class="link-text" id="modalText">Вы уверены, что хотите перейти на страницу: </p>
+           <div class="modal-pop-up-content">
+                <button id="modalYes"> 
+                    Да
+                </button>
+                <button id="modalNo">
+                    Нет
+                </button>
                 </div>
             </div>
         </div>
@@ -52,6 +60,8 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
+
+    <!-- Подключение скрипта, для отобржаения окна подтверждения перехода -->
     <script src="/static/scripts/site-scripts.js"></script>
 </body>
 </html>
