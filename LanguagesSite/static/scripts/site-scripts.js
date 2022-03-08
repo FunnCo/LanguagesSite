@@ -16,7 +16,7 @@ function showRedirectMessage(uri) {
 
     // Отключение всех карт, находящихся на экране. По нима нельзя клинкуть, и они не реагируют на указатель.
     document.querySelectorAll('.card').forEach(card => {
-        if (card.id != elementId && card.id != 'modalCard') {
+        if (card.id != 'modalCard') {
             card.classList.add('disabled-card')
         }
     })
@@ -43,7 +43,7 @@ function showRedirectMessage(uri) {
     // Скрытие окна, возвращение нормальной прозрачности содержимому за окном и верхней панели
     noButton.onclick = () => {
         document.querySelectorAll('.card').forEach(card => {
-            if (card.id != elementId && card.id != 'modalCard') {
+            if (card.id != 'modalCard') {
                 card.classList.remove('disabled-card')
             }
             modalCard.style.visibility = 'hidden'

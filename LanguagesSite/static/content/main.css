@@ -1,3 +1,4 @@
+/* Это объявдение шрифта, который будет использоваться на сайте.*/
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff');
@@ -6,7 +7,7 @@
     font-display: swap;
 }
 
-
+/* Стиль для всего содежримого страницы*/
 html, body {
     margin: 0px;
     padding: 0px;
@@ -14,23 +15,29 @@ html, body {
     background: #181818;
 }
 
+
+/* Стиль для заголовоков */
 h1, h2, h3, h4 {
     color: whitesmoke;
 }
 
+/* Стиль для обычного текста */
 p {
     color: whitesmoke;
 }
 
+/* Стиль для сворчаивания содержимого с этим классом, в линейный блок */
 .wrapper {
     display: inline-block;
 }
 
+/* Стиль для центровки элемента с этим классом в другом элементе */
 .center {
     display: flex;
     justify-content: center;
 }
 
+/* Стиль "контейнер" для карточек */
 .cards_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -39,36 +46,43 @@ p {
     grid-column-gap: 2rem;
 }
 
+/* Стиль для карточки */
 .card {
     background-color: #333;
     border-radius: 16px;
     padding: 2rem 2rem 2rem 2rem;
 }
 
-    .card:hover {
-        transform: scale(1.07);
-    }
+/* Стиль для определяющий поведение карточки, при наведении на него мыши */
+.card:hover {
+    transform: scale(1.03);
+}
 
+/* Стиль используемый в некоторых текстах, где нужно большее растояние между буквами */
 .normal-letters {
     letter-spacing: 2px;
 }
 
+/* Стиль для создания отступа в 15rem слева */
 .margin-15rem-left {
     margin-left: 15rem;
 }
 
+/* Стиль оформления ссылок на другие сайты */
 .link {
     color: white;
     font-style: italic;
     text-decoration: none;
 }
 
+/* Стиль, определяющий поведение ссылки, при наведении на нее курсора мыши */
     .link:hover {
         color: white;
         font-style: normal;
         text-decoration: underline;
     }
 
+/* Стиль, определяющий положенеие появлящегося модального окна */
 .modal-pop-up {
     visibility: hidden;
     position: fixed;
@@ -80,14 +94,17 @@ p {
     max-width: 80%;
 }
 
+/* Стиль для изменения типа позиционирования элементов в модальном окне */
 .modal-pop-up-content {
     position: relative;
 }
 
+/* Стиль для отключения возможности взаимодейстоввать с карточкой */
 .disabled-card {
     pointer-events: none;
 }
 
+/* Стиль опредеяющий оформление кнопок */
 button {
     float: right;
     background: none;
@@ -101,20 +118,14 @@ button {
     text-decoration: None;
 }
 
+    /* Стиль, определяющий поведение кнопки, при наведении на нее курсора мыши */
     button:hover {
         background-color: #181818;
     }
 
+/* Стиль определяющий внешний вид модального окна*/
 .modal-card {
     background-color: #333;
     border-radius: 16px;
     padding: 2rem 2rem 2rem 2rem;
 }
-
-/* 
-Main - #181818
-Main Supporting - #595959
-Additional - #232323
-Additional Supporting - #686868
-Shadow - #3D3D3D
-*/
