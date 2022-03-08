@@ -58,6 +58,7 @@ p {
     transform: scale(1.03);
 }
 
+/* Стиль для элемента-контейнера, в котором будет указано опаисание сайта и название страницы */
 .description_container {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -66,15 +67,18 @@ p {
     padding-bottom: 40px;
 }
 
+/* Стиль для заголовка на страницу "О Проекте" */
 .heading {
     font-size: 35px;
     letter-spacing: 2px;
 }
 
+/* Стиль для текста в описании проекта*/
 .description {
     font-size: 20px;
 }
 
+/* Стиль для эелемента-контейнера для карточку с человеком */
 .persons_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -82,31 +86,24 @@ p {
     grid-column-gap: 8rem;
 }
 
+/* Стиль для карточки с человеком */
 .person {
     background-color: #333;
     border-radius: 16px;
     padding: 2rem 2rem 2rem 2rem;
 }
 
-.person-link {
-    color: white;
-    text-decoration: none;
-}
-
-    .person-link:hover {
-        color: white;
-        font-style: normal;
-        text-decoration: underline;
-    }
-
+/* Стиль меняющий цвет обычного текста на вспомогательный*/
 .p-secondary {
     color: #686868;
 }
 
+/* Стиль для оформления картинки*/
 .image {
     border-radius: 8px;
 }
 
+/* Стиль, меняющий расстояние между буквами для текста, в определенных местах сайта */
 .normal-letters {
     letter-spacing: 2px;
 }
@@ -116,10 +113,12 @@ p {
     margin-left: 15rem;
 }
 
+/* Стиль для создания отступа в 50rem справа */
 .margin-50rem-right {
     margin-right: 50rem;
 }
 
+/* Стиль оформления ссылок */
 .link {
     color: white;
     font-style: italic;
