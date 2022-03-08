@@ -1,14 +1,22 @@
 % rebase('layout.tpl', title='Home Page', year=year)      
 
+<!-- Это div-контейнер для всего содержиого страницы, который будет использован для отображения подтвержения перехода на другую страницу -->
 <div id="pageWrapper">
+        
+<!--  -->
+
+        <!-- Текст заголовок для данной страницы -->
         <div>
             <div class="margin-15rem-left" onclick="showRedirectMessage('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
                 <h1 class="normal-letters">Каталог языков</h1>
             </div>
         </div>
 
+        <!-- Блок карточек, в котором будут отобржаться карточки с описанием языков -->
         <div>
             <div class="center cards_container">
+
+                <!-- Карточка, содежащая в себе лого, название, опаисание, год релиза, ссылку на сайт, текущую компанию-владельца и основателя. -->
                 <div class="card">
                         <div>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/220px-Swift_logo.svg.png"/>
@@ -18,14 +26,19 @@
                                 Swift — открытый мультипарадигмальный компилируемый язык программирования общего назначения. Создан компанией Apple в первую очередь для разработчиков iOS и macOS. Swift работает с фреймворками Cocoa и Cocoa Touch и совместим с основной кодовой базой Apple, написанной на Objective-C. Swift задумывался как более лёгкий для чтения и устойчивый к ошибкам программиста язык, нежели предшествовавший ему Objective-C. Программы на Swift компилируются при помощи LLVM, входящей в интегрированную среду разработки Xcode 6 и выше. Swift может использовать рантайм Objective-C, что делает возможным использование обоих языков (а также С) в рамках одной программы.
                             </p>
                             <p>Год релиза: 2014</p>
+                            <!-- При переходе здесь не повяляется подтверждение о переходе -->
                             <p>Сайт: 
                                 <a class="link" rel="nofollow" href="https://swift.org">swift.org</a>
                             </p>
                             <p>Компания: Apple</p>
                             <p>Основатель: Крис Латтнер</p>
+                            <!-- При нажатии на конпку "Подробнее..." повяляется окно подтвержения перехода, с помощью скрипта showRedirectMessage, который находится в /static/scripts/site-scripts.js -->
                             <button onclick="showRedirectMessage('https://ru.wikipedia.org/wiki/Swift_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)')">Подробнее...</button>                        
                         </div>
                     </div>
+
+                    <!-- Остальные карточки написаны по тому же шаблону, что и вышеописанная карточка. -->
+
                     <div class="card">
                         <div>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kotlin_logo_2021.svg/220px-Kotlin_logo_2021.svg.png"/>
