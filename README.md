@@ -38,7 +38,7 @@
 
 ## Авторы <a name = "authors"></a>
 
-- [@alex1dev](https://github.com/a1exdev) - Верстка страницы "О Проекте"
+- [@a1exdev](https://github.com/a1exdev) - Верстка страницы "О Проекте"
 - [@MaksimowEugene](https://github.com/MaksimowEugene) - Верстка страницы "Статистика"
 - [@FunnCo](https://github.com/FunnCo) - Верстка страницы "Главная"
 
