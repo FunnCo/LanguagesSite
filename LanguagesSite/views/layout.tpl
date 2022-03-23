@@ -34,6 +34,11 @@
         </div>
     </div>
 
+        <!-- Класс-оверлей, для отображения кнопки "Задать вопрос" -->
+        <div class="top-panel_overlay_end">
+                <p><input onclick="showQuestionMessage()" type="submit" id="askQuestion" name="askQuestion" value="Задать вопрос"/></p>
+        </div>
+
     <!-- Содержание текущей страницы -->
     <div class="container body-content">
         {{!base}}
@@ -54,6 +59,30 @@
                 </button>
                 </div>
             </div>
+        </div>
+    </div>
+
+        <!-- Создание модального окна "Задать вопрос" -->
+    <div id="modalAskQuestionCard" class="modal-card modal-pop-up">
+        <div>
+           <h2>Задать вопрос</h2>
+           <hr>
+           <p id="modalText">Если вы желаете задать вопрос, пожалуйста, напишите его в поле ниже, а также укажите вашу почту. Ответ придет вам в ближайшее время.</p>
+           <form action="/home" method="post">
+                <p><textarea name="question" placeholder="Ваш вопрос"></textarea></p>
+                <p><input class="textinput" type="text" size="50" name="address" placeholder="Ваша почта"></p>
+           
+           <div class="modal-pop-up-content">
+                <form action="/home" method="post">
+                    <input id="modalAskQuestionSend" name="modalAskQuestionSend" type="submit" value="Отправить"/> 
+                </form>
+                <button id="modalAskQuestionCancel">
+                    Отмена
+                </button>
+                </div>
+
+            </div>
+            </form>
         </div>
     </div>
 

@@ -662,6 +662,7 @@ button {
     background: none;
     background-color: none;
     border: 0;
+    border-radius: 8px;
     letter-spacing: 1px;
     font-size: medium;
     font: Montserrat;
