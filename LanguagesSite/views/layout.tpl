@@ -75,14 +75,14 @@
            <div class="modal-pop-up-content">
                 <form action="/home" method="post">
                     <input id="modalAskQuestionSend" name="modalAskQuestionSend" type="submit" value="Отправить"/> 
-                </form>
-                <button id="modalAskQuestionCancel">
+                </form>             
+                <button type="button" id="modalAskQuestionCancel">
                     Отмена
                 </button>
                 </div>
-
+                </form>
             </div>
-            </form>
+            
         </div>
     </div>
 

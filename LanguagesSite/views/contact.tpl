@@ -1,7 +1,7 @@
 % rebase('layout.tpl', title='Статистика', year=year)
 
 <!--заголовок-->
-<h1 style="font-size:50px";><center>Статистика по языкам</center></h1>
+<h1 style="normal-letters";><center>Статистика по языкам</center></h1>
 
 <!--Диаграмма-->
 <dl>
