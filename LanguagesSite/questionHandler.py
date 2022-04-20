@@ -2,8 +2,18 @@ from bottle import post, redirect, request
 import re
 import pdb
 import json
+import re
+
 
 all_questions = {}
+
+
+def isMailValid(mail):
+    regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$' 
+    if (re.search(regex, mail)):
+        return True
+    else:
+        return False
 
 
 @post('/home', method='post')
@@ -14,11 +24,10 @@ def my_form():
 	if (mail == "" or question == ""):
 		return "Не все поля были заполнены."
 
-	regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$' 
-	if (not re.search(regex, mail)):
+	
+	if isMailValid(mail):
 		return "Введена некорректная почта."
 
-#	pdb.set_trace()
 	all_questions[mail] = question
 	writeQuestionInJSON(question, mail)
 	return 'Спасибо! Ответ будет вам выслан на почту в ближайшее время.'
@@ -52,5 +61,6 @@ def readQuestionsFromJSON():
 					all_questions[user] = question
 			return data
 	except:	
+		print("Couldn't read file")
 		return
 
