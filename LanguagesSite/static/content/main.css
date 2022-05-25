@@ -13,6 +13,19 @@ html, body {
     padding: 0px;
     font-family: "Montserrat";
     background: #181818;
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
 }
 
 
@@ -50,12 +63,8 @@ p {
 .card {
     background-color: #333;
     border-radius: 16px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 16px;
 }
-
-    .card:hover {
-        transform: scale(1.03);
-    }
 
 .normal-letters {
     letter-spacing: 2px;
@@ -473,7 +482,7 @@ dt {
 
 /* Стиль для определяющий поведение карточки, при наведении на него мыши */
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 .percentage-83:after {
     width: 83%;
@@ -660,7 +669,7 @@ html, body {
 button {
     float: right;
     background: none;
-    background-color: none;
+    background-color: transparent;
     border: 0;
     border-radius: 8px;
     letter-spacing: 1px;
@@ -676,6 +685,36 @@ button {
         background-color: #181818;
     }
 
+input {
+    float: right;
+    background: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-size: medium;
+    font: Montserrat;
+    color: whitesmoke;
+    padding: 8px;
+    text-decoration: None;
+}
+
+    input[button]:hover {
+        background-color: #252525;
+    }
+
+#publish, #publish_confirm, #publish_cancel {
+    background: #333;
+    margin-inline: 8px;
+    white-space: nowrap;
+}
+    #aksQuestion:hover {
+        background-color: #FFF;
+    }
+#publish:hover, #publish_confirm:hover, #publish_cancel:hover {
+    background-color: #252525;
+}
+
 /* Стиль определяющий внешний вид модального окна*/
 .modal-card {
     background-color: #333;
@@ -683,3 +722,38 @@ button {
     padding: 2rem 2rem 2rem 2rem;
 }
 
+.article_container{
+    position: relative;
+    display: flex;
+    margin-top:64px;
+    flex-flow: column wrap;
+    justify-content:space-evenly;
+    align-items: stretch;
+}
+
+.article_card {
+    flex: 0.2;
+    transition: all 0.1s ease-out;
+}
+
+.article_card {
+    flex: 0.2;
+    transition: all 0.1s ease-out;
+    margin-bottom: 16px;
+}
+
+.editor_container {
+    margin-top: 64px;
+}
+
+.article_heading {
+    margin-top: 10px;
+}
+
+.article_expand{
+    position:absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 16pt;
+    color: whitesmoke;
+}

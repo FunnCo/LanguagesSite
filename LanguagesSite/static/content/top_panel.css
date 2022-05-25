@@ -26,15 +26,16 @@ html, body {
 }
 
 .top-panel_overlay_end {
-    width: 95%;
+    width: 10%;
+    right: 32px;
     justify-content: end;
-    position: relative;
+    position: absolute;
     z-index: 1500;
     font-weight: 600;
     color: white;
     font-size: 32px;
     line-height: 0;
-    margin-top: -74px;
+    margin-top: -68px;
     letter-spacing: 8px;
     padding-bottom: 38px;
 }
@@ -66,7 +67,7 @@ html, body {
 
 
 /* Стиль опредеяющий оформление кнопок */
-input {
+#askQuestion {
     float: right;
     background: none;
     background-color: none;
@@ -94,7 +95,7 @@ input {
     border: solid;
     background: none;
     background-color: none;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 8px;
     border-width: 1px;
     border-color: whitesmoke;
     font-size: medium;
@@ -109,19 +110,6 @@ input {
     width: 100%;
 }
 
-/* Стиль, определяющий поведение кнопки, при наведении на нее курсора мыши */
-    .textinput:hover {
-        background-color: #181818;
-        border: none;
-        outline: none;
-    }
-
-    .textinput:focus {
-        border: solid;
-        outline: none;
-        background-color: #181818;
-        border-color: #181818
-    }
 
 textarea {
     border: solid;
@@ -142,19 +130,6 @@ textarea {
     height: 96px;
 }
 
-/* Стиль, определяющий поведение кнопки, при наведении на нее курсора мыши */
-    textarea:hover {
-        background-color: #181818;
-        border: none;
-        outline: none;
-    }
-
-    textarea:focus {
-        border: solid;
-        outline: none;
-        background-color: #181818;
-        border-color: #181818
-    }
 
 
 

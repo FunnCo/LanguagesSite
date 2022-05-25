@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>LanguagesSite</Name>
     <RootNamespace>LanguagesSite</RootNamespace>
-    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
@@ -34,11 +34,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="articleHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="questionHandler.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
     <Compile Include="test\test_mail.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_phone.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\__init__.py">
@@ -54,6 +60,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="articles.txt">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="data.txt">
       <SubType>Code</SubType>
     </Content>
@@ -86,6 +95,9 @@
     <Content Include="static\scripts\site-scripts.js" />
     <Content Include="static\scripts\_references.js" />
     <Content Include="views\about.tpl" />
+    <Content Include="views\articles.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />

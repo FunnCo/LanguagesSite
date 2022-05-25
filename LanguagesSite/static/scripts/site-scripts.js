@@ -88,9 +88,9 @@ function showQuestionMessage() {
             if (card.id != 'modalAskQuestionCard') {
                 card.classList.remove('disabled-card')
             }
-            modalCard.style.visibility = 'hidden'
-            pageWrapper.style.opacity = 1
-            document.getElementById('topPanel').style.opacity = 1
         })
+        modalCard.style.visibility = 'hidden'
+        pageWrapper.style.opacity = 1
+        document.getElementById('topPanel').style.opacity = 1
     }
 }
