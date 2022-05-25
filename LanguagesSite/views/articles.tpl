@@ -30,27 +30,21 @@
 			phone = phone.replaceAll('(', '')
 			phone = phone.replaceAll(')', '')
 
+			// Формирование тела запроса к серверу
 			body = {
 				'nickname':$("#article_nickname").val(),
 				'article_name':$("#article_name").val(),
 				'content':$("#article_content").val(),
 				'phone':phone,
 			}
-
-			var regex = /^((\+7|7|8)+([0-9]){10})$/
 			
+			// Проверка полей на заполненность
 			if(phone.replace(/\s+/g, '') == "" ||  $("#article_name").val().replace(/\s+/g, '') == "" || $("#article_content").val().replace(/\s+/g, '') == "" || $("#article_nickname").val().replace(/\s+/g, '') == ""){
 				alert("Не все поля заполнены. Пожалуйста, проверьте введенные данные и введите их снова")
 				return false
 			}
-
-			if(!regex.test(phone)){
-				alert("Телефон некорректен. Пожалуйста, проверьте введенные данные и введите их снова")
-				return false
-			}
-
-
 			
+			// Запрос к серверу
 			$.ajax({
             url: '/post/article',
             dataType: 'json',
@@ -58,6 +52,7 @@
             contentType: 'application/json',
             data: JSON.stringify({ 'data': body }),
             success: function (result) {
+					// Обработка ответа от сервера, в случае если телефон указан некорректно
 					if(!result['result']){
 						alert("Телефон некорректен. Пожалуйста, проверьте введенные данные и введите их снова")
 						return false
@@ -68,7 +63,9 @@
 		})
 	}
 
+	
 	$(function() {
+		// Обработчик нажатия на кнопку "Опубликовать свою статью"
 		$("#publish").on("click", function(){
 			$(".editor_container").show()
 			$(".article_container").hide()
@@ -78,6 +75,7 @@
 
 		})
 
+		// Обработчик нажатия на кнопку "Отмена"
 		$("#publish_cancel").on("click", function(){
 			$(".editor_container").hide()
 			$(".article_container").show()
@@ -96,11 +94,13 @@
 			})
 		})
 
+		// Запрос на загрузку статей с сервера
 		$.ajax({
             url: '/get/all',
             type: 'get',
             contentType: 'application/json',
             success: function (result) {
+					// Заполнение страницы статьями, полученными от сервера
 					result["result"].forEach(element => 
 						$('<div class="card article_card">' + element + '</div>').appendTo($(".article_container"))
 					)
