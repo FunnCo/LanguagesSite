@@ -1,4 +1,5 @@
 from bottle import post, get, request
+from datetime import datetime
 import json
 import re
 
@@ -13,7 +14,7 @@ def addNewOrder():
 
     if(isPhoneValid(parameters.get('phone'))):
         with open("orders.txt", "a") as myfile:
-            myfile.write(parameters.get("username") + "\n" + parameters.get("order_name") + "\n" + parameters.get("phone") + "\n" + parameters.get("content") + "\n----------\n")
+            myfile.write(parameters.get("username") + "\n" + parameters.get("order_name") + "\n" + parameters.get("phone") + "\n" + parameters.get("content") + "\n" + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + "\n----------\n")
     else:
         return {"result": False}
     
@@ -31,6 +32,8 @@ def getAllOrders():
         line = orders_file.readline()
         phone = line
         line = orders_file.readline()
+        time = line
+        line = orders_file.readline()
 
         content = ""
         while line != "----------\n":
@@ -41,6 +44,7 @@ def getAllOrders():
         result_order += content
         result_order += "<br><br><p>Имя пользователя: " + username + "</p>"
         result_order += "<p>Телефон: " + phone + "</p>"
+        result_order += "<p>" + time + "</p>"
         result_order = result_order.replace("\n",'')
         result_order = result_order.replace("\t",'    ')
 

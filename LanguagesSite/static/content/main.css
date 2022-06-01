@@ -780,3 +780,11 @@ input {
 .small-margin-bottom {
     margin-bottom: 0.1rem;
 }
+
+.medium-margin-top {
+    margin-top: 1.5rem;
+}
+
+.big-margin-top {
+    margin-top: 3.5rem;
+}
