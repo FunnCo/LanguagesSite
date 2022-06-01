@@ -34,76 +34,8 @@
         </div>
     </div>
 
-        <div class="top-panel_overlay_end">
-                <p><input onclick="showQuestionMessage()" type="submit" id="askQuestion" name="askQuestion" value="Задать вопрос"/></p>
-        </div>
-
     <div id="pageWrapper" class="container body-content">
         {{!base}}
-    </div>
-
-    <div id="modalCard" class="modal-card modal-pop-up">
-        <div>
-           <h2>Переход на другую страницу</h2>
-           <hr>
-           <p class="link-text" id="modalText">Вы уверены, что хотите перейти на страницу: </p>
-           <div class="modal-pop-up-content">
-                <button id="modalYes"> 
-                    Да
-                </button>
-                <button id="modalNo">
-                    Нет
-                </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modalAskQuestionCard" class="modal-card modal-pop-up">
-        <div>
-           <h2>Задать вопрос</h2>
-           <hr>
-           <p id="modalText">Если вы желаете задать вопрос, пожалуйста, напишите его в поле ниже, а также укажите вашу почту. Ответ придет вам в ближайшее время.</p>
-           <form action="/home" method="post">
-                <p><textarea name="question" placeholder="Ваш вопрос"></textarea></p>
-                <p><input class="textinput" type="text" size="50" name="address" placeholder="Ваша почта"></p>
-           
-           <div class="modal-pop-up-content">
-                <form action="/home" method="post">
-                    <input id="modalAskQuestionSend" name="modalAskQuestionSend" type="submit" value="Отправить"/> 
-                </form>             
-                <button type="button" id="modalAskQuestionCancel">
-                    Отмена
-                </button>
-                </div>
-                </form>
-            </div>
-            
-        </div>
-    </div>
-
-            <!-- Создание модального окна "Задать вопрос" -->
-    <div id="modalOrderCreationCard" class="modal-card modal-pop-up">
-        <div>
-           <h2>Опубликовать статью</h2>
-           <hr>
-           <p id="modalText">Напишите название и текст вашей статьи в поля нижу, а так же, пожалуйста, укажите ваше имя и телефон</p>
-           <form action="/home" method="post">
-                <p><textarea name="question" placeholder="Ваш вопрос"></textarea></p>
-                <p><input class="textinput" type="text" size="50" name="address" placeholder="Ваша почта"></p>
-           
-           <div class="modal-pop-up-content">
-                <form action="/home" method="post">
-                    <button type="button" id="modalOrderCreationOK">Отправить</button>
-                </form>             
-                <button type="button" id="modalAskQuestionCancel">
-                    Отмена
-                </button>
-                </div>
-                </form>
-            </div>
-            
-        </div>
     </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>

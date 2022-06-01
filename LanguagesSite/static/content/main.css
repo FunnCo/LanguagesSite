@@ -15,6 +15,18 @@ html, body {
     background: #181818;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 
 /* Стиль для заголовоков */
 h1, h2, h3, h4 {
@@ -50,12 +62,8 @@ p {
 .card {
     background-color: #333;
     border-radius: 16px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 16px;
 }
-
-    .card:hover {
-        transform: scale(1.03);
-    }
 
 .normal-letters {
     letter-spacing: 2px;
@@ -142,7 +150,7 @@ dt {
     .percentage:hover:after, .percentage:focus:after {
         background-color: #00B060;
     }
-    /*выбор длины столбца диаграммы*/
+/*выбор длины столбца диаграммы*/
 .percentage-1:after {
     width: 1%;
 }
@@ -473,8 +481,9 @@ dt {
 
 /* Стиль для определяющий поведение карточки, при наведении на него мыши */
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
+
 .percentage-83:after {
     width: 83%;
 }
@@ -563,6 +572,7 @@ dt {
 .link-text {
     word-break: break-all;
 }
+
 html, body {
     height: 500px;
     font-family: Montserrat;
@@ -634,34 +644,13 @@ html, body {
         text-decoration: underline;
     }
 
-/* Стиль, определяющий положенеие появлящегося модального окна */
-.modal-pop-up {
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 50;
-    width: 500px;
-    max-width: 80%;
-}
-
-/* Стиль для изменения типа позиционирования элементов в модальном окне */
-.modal-pop-up-content {
-    position: relative;
-}
-
-/* Стиль для отключения возможности взаимодейстоввать с карточкой */
-.disabled-card {
-    pointer-events: none;
-}
-
 /* Стиль опредеяющий оформление кнопок */
 button {
     float: right;
     background: none;
-    background-color: none;
+    background-color: transparent;
     border: 0;
+    border-radius: 8px;
     letter-spacing: 1px;
     font-size: medium;
     font: Montserrat;
@@ -675,14 +664,35 @@ button {
         background-color: #181818;
     }
 
-/* Стиль определяющий внешний вид модального окна*/
-.modal-card {
-    background-color: #333;
-    border-radius: 16px;
-    padding: 2rem 2rem 2rem 2rem;
+input {
+    float: right;
+    background: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-size: medium;
+    font: Montserrat;
+    color: whitesmoke;
+    padding: 8px;
+    text-decoration: None;
 }
 
-.orderContainer {
+    input[button]:hover {
+        background-color: #252525;
+    }
+
+#publish, #publish_confirm, #publish_cancel {
+    background: #333;
+    margin-inline: 8px;
+    white-space: nowrap;
+}
+
+#publish:hover, #publish_confirm:hover, #publish_cancel:hover {
+    background-color: #252525;
+}
+
+.order_container {
     position: relative;
     display: flex;
     margin-top: 64px;
@@ -691,21 +701,21 @@ button {
     align-items: stretch;
 }
 
-.orderCard {
+.order_card {
     flex: 0.2;
     transition: all 0.1s ease-out;
     margin-bottom: 16px;
 }
 
-.editorContainer {
+.editor_container {
     margin-top: 64px;
 }
 
-.orderHeading {
+.order_heading {
     margin-top: 10px;
 }
 
-.orderExpand {
+.order_expand {
     position: absolute;
     right: 16px;
     top: 16px;

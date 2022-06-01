@@ -7,42 +7,45 @@ def isPhoneValid(phone):
     return re.search(regex, phone)
 
 @post("/post/order")
-def addOrder():
+def addNewOrder():
     requestBody = json.load(request.body)
     parameters = requestBody.get('data')
+
     if(isPhoneValid(parameters.get('phone'))):
-        with open("orders.txt", "a") as outputFile:
-            outputFile.write(parameters.get("username") + "\n" + parameters.get("orderName") + "\n" + parameters.get("phone") + "\n" + parameters.get("content") + "\n\n\n\n")
+        with open("orders.txt", "a") as myfile:
+            myfile.write(parameters.get("username") + "\n" + parameters.get("order_name") + "\n" + parameters.get("phone") + "\n" + parameters.get("content") + "\n----------\n")
     else:
         return {"result": False}
- 
+    
 @get("/get/all")
-def getOrders():
+def getAllOrders():
+
     orders = []
-    ordersFile = open('orders.txt')
-    line = ordersFile.readline()
+    orders_file = open('orders.txt')
+
+    line = orders_file.readline()
     while line != '':
         username = line
-        line = ordersFile.readline()
-        orderName = line
-        line = ordersFile.readline()
+        line = orders_file.readline()
+        order_name = line
+        line = orders_file.readline()
         phone = line
-        line = ordersFile.readline()
+        line = orders_file.readline()
 
         content = ""
-        while line != "\n\n\n\n":
+        while line != "----------\n":
             content = content + "<p>" + line + "</p>"
-            line = ordersFile.readline()
+            line = orders_file.readline()
 
-        orderOutput = "<h2>" + orderName + "</h2>"
-        orderOutput += content
-        orderOutput += "<br><br><p>Ïîëüçîâàòåëü: " + username + "</p>"
-        orderOutput += "<p>Òåëåôîí: " + phone + "</p>"
-        orderOutput = orderOutput.replace("\n",'')
-        orderOutput = orderOutput.replace("\t",'    ')
+        result_order = "<h2>" + order_name + "</h2>"
+        result_order += content
+        result_order += "<br><br><p>Ğ˜Ğ¼Ñ Ğ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ñ‚ĞµĞ»Ñ: " + username + "</p>"
+        result_order += "<p>Ğ¢ĞµĞ»ĞµÑ„Ğ¾Ğ½: " + phone + "</p>"
+        result_order = result_order.replace("\n",'')
+        result_order = result_order.replace("\t",'    ')
 
-        orders.append(orderOutput)
-        line = ordersFile.readline()
+        orders.append(result_order)
+        line = orders_file.readline()
 
-    ordersFile.close()
+    orders_file.close()
     return {"result": orders}
