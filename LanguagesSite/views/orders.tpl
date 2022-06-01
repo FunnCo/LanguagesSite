@@ -3,20 +3,28 @@
 <div>
 	<h1>Заказы</h1
 	<p class="description">Данная страница предназначена для размещения заказов на публикацию тех или иных статей, связанных с языками программирования и их развитием.</p>
-	<button id="publish">Опубликовать свою статью</button>
-	<button hidden="true" id="publish_confirm" type="submit" form="order_form">Разместить</button>
+	<div class="order_container">
+	</div>
+	<div class="center">
+	<button id="publish">Разместить заказ</button>
+	</div>
+	<div class="center">
 	<button hidden="true" id="publish_cancel">Отменить</button>
-	<div hidden="true" class="editor_container">
-	<form action="javascript:handleOrderSubmission()" id="order_form">
-		<p><input class="textinput" type="text" id="order_username" size="50" name="order_name" placeholder="Ваше имя"></p>
-		<p><input class="textinput" type="text" id="order_name" size="50" name="order_name" placeholder="Тема заказа"></p>
-		<p><textarea class="textinput" name="aritcle_content" id="order_content" placeholder="Описание заказа"></textarea></p>
-		<p><input class="textinput" type="text" size="50" name="order_name" id="order_phone"  placeholder="Ваш номер телефона"></p>
+	<button hidden="true" id="publish_confirm" type="submit" form="order_form">Разместить</button>
+	</div>
+	<div hidden="true" class="person editor_container">
+	<form action="javascript:ordersHandler()" id="order_form">
+		<div class="small-margin-bottom">
+		<p><input class="textinput corners" type="text" id="order_name" name="order_name" size="50" placeholder="Тема заказа"></p>
+		<p><input class="textinput corners" type="text" id="order_phone" name="order_name" size="50" placeholder="Ваш номер телефона"></p>
+		<p><input class="textinput corners" type="text" id="order_username" name="order_name" size="50" placeholder="Ваше имя"></p>
+			</div>
+					<p><textarea class="textinput area-background" id="order_content" name="aritcle_content" placeholder="Описание заказа"></textarea></p>
 	</div>
 </div>
 
 <script>
-	function handleOrderSubmission() {
+	function ordersHandler() {
 		$(function() {
 			var phone = $("#order_phone").val()
 			phone = phone.replaceAll(' ', '')

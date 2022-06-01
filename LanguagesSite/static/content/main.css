@@ -644,6 +644,28 @@ html, body {
         text-decoration: underline;
     }
 
+/* Стиль, определяющий положенеие появлящегося модального окна */
+.modal-pop-up {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    width: 500px;
+    max-width: 80%;
+}
+
+/* Стиль для изменения типа позиционирования элементов в модальном окне */
+.modal-pop-up-content {
+    position: relative;
+}
+
+/* Стиль для отключения возможности взаимодейстоввать с карточкой */
+.disabled-card {
+    pointer-events: none;
+}
+
 /* Стиль опредеяющий оформление кнопок */
 button {
     float: right;
@@ -688,13 +710,27 @@ input {
     white-space: nowrap;
 }
 
+#aksQuestion:hover {
+    background-color: #FFF;
+}
+
 #publish:hover, #publish_confirm:hover, #publish_cancel:hover {
     background-color: #252525;
 }
 
+/* Стиль определяющий внешний вид модального окна*/
+.modal-card {
+    background-color: #333;
+    border-radius: 16px;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
 .order_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: 8rem;
     position: relative;
-    display: flex;
     margin-top: 64px;
     flex-flow: column wrap;
     justify-content: space-evenly;
@@ -721,4 +757,26 @@ input {
     top: 16px;
     font-size: 16pt;
     color: whitesmoke;
+}
+
+.area-background {
+    resize: vertical;
+    width: 225px;
+    height: 36px;
+    color: white;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.corners {
+    border-radius: 8px;
+    border: 1px solid #777;
+    padding: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.small-margin-bottom {
+    margin-bottom: 0.1rem;
 }
