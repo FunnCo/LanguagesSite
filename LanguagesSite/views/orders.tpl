@@ -36,11 +36,23 @@
 				'username':$("#order_username").val(),
 				'order_name':$("#order_name").val(),
 				'content':$("#order_content").val(),
-				'phone':phone,
+				'phone':phone
 			}
 
-			if(phone.replace(/\s+/g, '') == "" ||  $("#order_name").val().replace(/\s+/g, '') == "" || $("#order_content").val().replace(/\s+/g, '') == "" || $("#order_username").val().replace(/\s+/g, '') == ""){
+			if(phone.replace(/\s+/g, '') == "" ||  $("#order_name").val().replace(/\s+/g, '') == "" || $("#order_content").val().replace(/\s+/g, '') == "" || $("#order_username").val().replace(/\s+/g, '') == "") {
 				alert("Пожалуйста, заполните все поля.")
+				return false
+			}			
+			if($("#order_username").val().length < 2) {
+				alert("Имя не может быть короче 2 знаков.")
+				return false
+			}
+			if($("#order_name").val().length < 4) {
+				alert("Тема заказа не может быть короче 4 знаков.")
+				return false
+			}
+			if($("#order_content").val().length < 20) {
+				alert("Описание заказа не может быть короче 20 знаков.")
 				return false
 			}
 
@@ -51,7 +63,7 @@
             contentType: 'application/json',
             data: JSON.stringify({ 'data': body }),
             success: function (result) {
-					if(!result['result']){
+					if(!result['result']) {
 						alert("Пожалуйста, проверьте корректность введенного номера телефона.")
 						return false
 					}
@@ -61,7 +73,7 @@
 	}
 	
 	$(function() {
-		$("#publish").on("click", function(){
+		$("#publish").on("click", function() {
 			$(".editor_container").show()
 			$(".order_container").hide()
 			$(this).hide()
@@ -69,7 +81,7 @@
 			$("#publish_cancel").show()
 		})
 
-		$("#publish_cancel").on("click", function(){
+		$("#publish_cancel").on("click", function() {
 			$(".editor_container").hide()
 			$(".order_container").show()
 			$("#publish").show()
