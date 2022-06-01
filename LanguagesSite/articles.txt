@@ -1,48 +1,16 @@
 FunnCo BOI
 C++
 +79623454527
+1111-11-11
 C++ (читается си-плюс-плюс) — компилируемый, статически типизированный язык программирования общего назначения.
 Поддерживает такие парадигмы программирования, как процедурное программирование, объектно-ориентированное программирование, обобщённое программирование. Язык имеет богатую стандартную библиотеку, которая включает в себя распространённые контейнеры и алгоритмы, ввод-вывод, регулярные выражения, поддержку многопоточности и другие возможности. C++ сочетает свойства как высокоуровневых, так и низкоуровневых языков. В сравнении с его предшественником — языком C — наибольшее внимание уделено поддержке объектно-ориентированного и обобщённого программирования.
 C++ широко используется для разработки программного обеспечения, являясь одним из самых популярных языков программирования. Область его применения включает создание операционных систем, разнообразных прикладных программ, драйверов устройств, приложений для встраиваемых систем, высокопроизводительных серверов, а также игр. Существует множество реализаций языка C++, как бесплатных, так и коммерческих и для различных платформ. Например, на платформе x86 это GCC, Visual C++, Intel C++ Compiler, Embarcadero (Borland) C++ Builder и другие. C++ оказал огромное влияние на другие языки программирования, в первую очередь на Java и C#.
 Синтаксис C++ унаследован от языка C. Изначально одним из принципов разработки было сохранение совместимости с C. Тем не менее C++ не является в строгом смысле надмножеством C; множество программ, которые могут одинаково успешно транслироваться как компиляторами C, так и компиляторами C++, довольно велико, но не включает все возможные программы на C.
-<<<!!!>>>
-1		FunnCo BOI
-2		Article_name
-3		phone
-4..N	article
-<<<!!!>>>
-1		FunnCo BOI
-2		Article_name
-3		phone
-4..N	article
-<<<!!!>>>
-1		FunnCo BOI
-2		Article_name
-3		phone
-4..N	article
-<<<!!!>>>
-TEST
-TEST
+<<<||==||==||==||==||>>>
+11111
+11111
 +79623454527
-TEST
-<<<!!!>>>
-TEST TEST
-TEST SET
-+79623454527
-SETSETESTESTRDFGS
-<<<!!!>>>
-TEST TEST
-TEST SET
-+79623454527
-SETSETESTESTRDFGS
-<<<!!!>>>
-asdfasdf
-adsf
-+79641328787
-asdf
-<<<!!!>>>
-lll
-lll
-+79623454527
-lll
-<<<!!!>>>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat varius leo, sit amet tincidunt tellus convallis lobortis. Nam tristique tortor in metus finibus mattis. Praesent ac nulla nec sem convallis gravida quis quis magna. Sed ullamcorper vel erat ac pharetra. Aenean tortor justo, porta eget libero non, faucibus porttitor leo. In ultrices et lectus eu viverra. Nam pharetra ante nisl, sit amet semper lacus suscipit in.
+
+Sed condimentum porta velit, vitae tincidunt elit lacinia at. Fusce sit amet aliquam arcu, at blandit nunc. Aliquam consectetur justo in velit cursus viverra. Suspendisse porttitor vehicula metus eget efficitur. Ut euismod cursus odio vel vestibulum. Mauris ultrices turpis lectus. Sed commodo nulla in erat consectetur, at fringilla nisl malesuada. Proin ac molestie massa, nec mollis sem. Mauris tincidunt sapien vitae quam egestas, nec vehicula leo euismod. Quisque at convallis risus. Aliquam faucibus eu lorem id ornare. Quisque interdum ut sapien eu placerat. Quisque viverra porttitor interdum. Aenean lobortis lacinia viverra. Donec in arcu tortor.
+<<<||==||==||==||==||>>>

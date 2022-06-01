@@ -16,7 +16,17 @@
 		<p><input class="textinput" type="text" id="article_name" size="50" name="article_name" placeholder="Название вашей статьи"></p>
 		<p><textarea class="textinput" name="aritcle_content" id="article_content" placeholder="Ваша статья"></textarea></p>
 		<p><input class="textinput" type="text" size="50" name="article_name" id="article_phone"  placeholder="Ваш номер телефона"></p>
+		<p class="description">Правила написания статьи:</p>
+		<p>
+			1. Статья должна быть посвящана языкам программирования, или темам, напрямую связанными с языками программирования.<br>
+			2. Статья должна содержать не менее 150 символов.<br>
+			3. Указывайте свой реальный номер телефона. Он не будет отображен в статье, и нужен лишь для того, чтобы нашим модераторы могли связаться с вами.<br>
+			4. Ваш псевдноим (ник) должен состоять не менее чем из 3 символов. При желании, вы можете указать свое ФИО.<br>
+			5. Название вашей статьи должно состоять не менее чем из 5 символов, и на сайте не должно быть уже написанной статьи с таким же названием.<br>
+		</p>
 	</div>
+
+
 </div>
 
 <script>
@@ -30,19 +40,46 @@
 			phone = phone.replaceAll('(', '')
 			phone = phone.replaceAll(')', '')
 
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0')
+			var mm = String(today.getMonth() + 1).padStart(2, '0')
+			var yyyy = today.getFullYear()
+
+			today = yyyy + "-" + mm + "-" + dd
+
 			// Формирование тела запроса к серверу
 			body = {
 				'nickname':$("#article_nickname").val(),
 				'article_name':$("#article_name").val(),
 				'content':$("#article_content").val(),
 				'phone':phone,
+				'publication_date':today
 			}
 			
 			// Проверка полей на заполненность
-			if(phone.replace(/\s+/g, '') == "" ||  $("#article_name").val().replace(/\s+/g, '') == "" || $("#article_content").val().replace(/\s+/g, '') == "" || $("#article_nickname").val().replace(/\s+/g, '') == ""){
+			if(phone.replace(/\s+/g, '') == "" || $("#article_name").val().replace(/\s+/g, '') == "" || $("#article_content").val().replace(/\s+/g, '') == "" || $("#article_nickname").val().replace(/\s+/g, '') == ""){
 				alert("Не все поля заполнены. Пожалуйста, проверьте введенные данные и введите их снова")
 				return false
 			}
+
+			// Проверка ника на длину
+			if($("#article_nickname").val().length < 3){
+				alert("Слишком короткий никнейм. Пожалуйста, введине ник длиной от 3 символов")
+				return false
+			}
+
+			// Проверка статьи на длину
+			if($("#article_name").val().length < 5){
+				alert("Слишком короткое название. Пожалуйста, введине назваине статьи длиной от 5 символов")
+				return false
+			}
+
+			// Проверка ника на длину
+			if($("#article_content").val().length < 150){
+				alert("Слишком короткая статья. Она должна содержать не менее 150 символов")
+				return false
+			}
+			
 			
 			// Запрос к серверу
 			$.ajax({
@@ -57,6 +94,7 @@
 						alert("Телефон некорректен. Пожалуйста, проверьте введенные данные и введите их снова")
 						return false
 					}
+					$("#publish_cancel").trigger('click')
 				}
 			})
 			
@@ -87,6 +125,7 @@
 				type: 'get',
 				contentType: 'application/json',
 				success: function (result) {
+						$(".article_container").children().remove()
 						result["result"].forEach(element => 
 							$('<div class="card article_card">' + element + '</div>').appendTo($(".article_container"))
 						)
@@ -100,10 +139,10 @@
             type: 'get',
             contentType: 'application/json',
             success: function (result) {
-					// Заполнение страницы статьями, полученными от сервера
-					result["result"].forEach(element => 
-						$('<div class="card article_card">' + element + '</div>').appendTo($(".article_container"))
-					)
+				// Заполнение страницы статьями, полученными от сервера
+				result["result"].forEach(element => 
+					$('<div class="card article_card">' + element + '</div>').appendTo($(".article_container"))
+				)
 			}
 		})
 	})

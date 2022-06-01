@@ -757,3 +757,18 @@ input {
     font-size: 16pt;
     color: whitesmoke;
 }
+
+.right_sided_text {
+    float: right;
+    justify-content: flex-end;
+}
+
+.left_sided_text {
+    float: left;
+    justify-content: flex-start;
+}
+
+.inline_text {
+    display: inline-block;
+    width: 100%;
+}
