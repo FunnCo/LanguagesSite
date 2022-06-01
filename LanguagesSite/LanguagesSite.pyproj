@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>LanguagesSite</Name>
     <RootNamespace>LanguagesSite</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="ordersHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +44,9 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="orders.txt">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -73,6 +79,9 @@
     <Content Include="views\contact.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\orders.tpl">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env1\">
@@ -88,6 +97,15 @@
       <Id>env2</Id>
       <Version>0.0</Version>
       <Description>env2 (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="env3\">
+      <Id>env3</Id>
+      <Version>3.9</Version>
+      <Description>env3 (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

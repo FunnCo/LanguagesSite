@@ -682,3 +682,33 @@ button {
     padding: 2rem 2rem 2rem 2rem;
 }
 
+.orderContainer {
+    position: relative;
+    display: flex;
+    margin-top: 64px;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.orderCard {
+    flex: 0.2;
+    transition: all 0.1s ease-out;
+    margin-bottom: 16px;
+}
+
+.editorContainer {
+    margin-top: 64px;
+}
+
+.orderHeading {
+    margin-top: 10px;
+}
+
+.orderExpand {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 16pt;
+    color: whitesmoke;
+}
