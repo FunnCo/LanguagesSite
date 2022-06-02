@@ -42,7 +42,7 @@
 			if(phone.replace(/\s+/g, '') == "" ||  $("#order_name").val().replace(/\s+/g, '') == "" || $("#order_content").val().replace(/\s+/g, '') == "" || $("#order_username").val().replace(/\s+/g, '') == "") {
 				alert("Пожалуйста, заполните все поля.")
 				return false
-			}			
+			}
 			if($("#order_username").val().length < 2) {
 				alert("Имя не может быть короче 2 знаков.")
 				return false
@@ -69,6 +69,10 @@
 					}
 				}
 			})
+			document.getElementById("order_name").value = ""
+			document.getElementById("order_phone").value = ""
+			document.getElementById("order_username").value = ""
+			document.getElementById("order_content").value = ""
 		})
 	}
 	
